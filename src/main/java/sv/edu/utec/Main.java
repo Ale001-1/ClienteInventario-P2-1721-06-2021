@@ -70,35 +70,41 @@ public class Main {
             List<ProductoApi> productosApi =
                     apiService.obtenerProductos();
 
-            // Mostrar todos los productos obtenidos
-            for (ProductoApi producto : productosApi) {
+            int cantidadMostrada = 0;
+            int stockTotal = 0;
 
-                System.out.printf(
-                        "ID: %d | Producto: %s | Precio: $%.2f | Stock: %d%n",
-                        producto.getId(),
-                        producto.getTitle(),
-                        producto.getPrice(),
-                        producto.getStock()
-                );
-            }
-
-            // 6. Filtrar productos con stock mayor a 50
-            System.out.println(
-                    "\n--- Productos con stock mayor a 50 ---"
-            );
-
+            // Mostrar solamente productos con stock mayor a 50
             for (ProductoApi producto : productosApi) {
 
                 if (producto.getStock() > 50) {
 
-                    System.out.printf(
-                            "ID: %d | Producto: %s | Stock: %d%n",
-                            producto.getId(),
-                            producto.getTitle(),
-                            producto.getStock()
+                    System.out.println(
+                            "ID: " + producto.getId()
+                                    + " | Producto: "
+                                    + producto.getTitle()
+                                    + " | Stock: "
+                                    + producto.getStock()
                     );
+
+                    cantidadMostrada++;
+                    stockTotal += producto.getStock();
                 }
             }
+
+            // 6. Mostrar resumen de los productos filtrados
+            System.out.println(
+                    "\n--- Resumen de productos de la API ---"
+            );
+
+            System.out.println(
+                    "Productos con stock mayor a 50: "
+                            + cantidadMostrada
+            );
+
+            System.out.println(
+                    "Stock total de productos mostrados: "
+                            + stockTotal
+            );
 
         } catch (SQLException e) {
 
