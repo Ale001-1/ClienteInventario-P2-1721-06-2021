@@ -296,14 +296,48 @@ git push origin main
 
 ## Parcial 2 — Consumo de API (completar por el estudiante)
 
-**Nombre:** _________________________________ · **Carnet:** ______________
+**Nombre:** Samayoa Torres, Diego Alejandro · **Carnet:** 1721-06-2021
 
 ### Salida de consola (segunda ejecución)
 
 ```
-(pegue aquí la salida completa de la segunda ejecución de Main)
+Tabla producto lista.
+
+--- Inventario inicial ---
+ID    PRODUCTO                    CANTIDAD
+1     Teclado mecanico                  15
+2     Monitor 24 pulgadas               12
+
+Respaldo generado en inventario.json
+Producto 2 actualizado.
+Producto 1 eliminado.
+
+--- Despues de los cambios ---
+ID    PRODUCTO                    CANTIDAD
+2     Monitor 24 pulgadas               12
+
+Registros restaurados desde JSON: 2
+
+--- Inventario final ---
+ID    PRODUCTO                    CANTIDAD
+1     Teclado mecanico                  15
+2     Monitor 24 pulgadas               12
+
+--- Productos obtenidos desde API REST ---
+ID: 1 | Producto: Essence Mascara Lash Princess | Precio: $9.99 | Stock: 99
+ID: 2 | Producto: Eyeshadow Palette with Mirror | Precio: $19.99 | Stock: 34
+ID: 3 | Producto: Powder Canister | Precio: $14.99 | Stock: 89
+ID: 4 | Producto: Red Lipstick | Precio: $12.99 | Stock: 91
+ID: 5 | Producto: Red Nail Polish | Stock: 79
+
+--- Resumen de productos de la API ---
+Productos con stock mayor a 50: 4
+Stock total de productos mostrados: 358
+
+Process finished with exit code 0
 ```
 
 ### Uso de inteligencia artificial
 
-(Declare si utilizó alguna herramienta de IA, cuál y para qué. Si no la utilizó, indíquelo.)
+(Sí, se utilizó la IA como herramienta de como apoyo durante el desarrollo del proyecto. Se utilizó principalmente para recibir orientación en la implementación del consumo de una API REST en Java, revisión y corrección del código, manejo de datos JSON, filtrado.
+)
