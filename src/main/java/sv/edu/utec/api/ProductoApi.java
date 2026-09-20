@@ -8,6 +8,7 @@ public class ProductoApi {
 
     private int id;
     private String title;
+    private double price;
     private int stock;
 
     public ProductoApi() {
@@ -27,6 +28,14 @@ public class ProductoApi {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public int getStock() {

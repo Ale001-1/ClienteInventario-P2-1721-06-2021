@@ -72,12 +72,12 @@ public class Main {
 
             for (ProductoApi producto : productosApi) {
 
-                System.out.println(
-                        "ID: " + producto.getId()
-                                + " | Producto: "
-                                + producto.getTitle()
-                                + " | Stock: "
-                                + producto.getStock()
+                System.out.printf(
+                        "ID: %d | Producto: %s | Precio: $%.2f | Stock: %d%n",
+                        producto.getId(),
+                        producto.getTitle(),
+                        producto.getPrice(),
+                        producto.getStock()
                 );
             }
 
