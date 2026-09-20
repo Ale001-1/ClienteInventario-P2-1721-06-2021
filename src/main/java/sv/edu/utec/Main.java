@@ -70,6 +70,7 @@ public class Main {
             List<ProductoApi> productosApi =
                     apiService.obtenerProductos();
 
+            // Mostrar todos los productos obtenidos
             for (ProductoApi producto : productosApi) {
 
                 System.out.printf(
@@ -79,6 +80,24 @@ public class Main {
                         producto.getPrice(),
                         producto.getStock()
                 );
+            }
+
+            // 6. Filtrar productos con stock mayor a 50
+            System.out.println(
+                    "\n--- Productos con stock mayor a 50 ---"
+            );
+
+            for (ProductoApi producto : productosApi) {
+
+                if (producto.getStock() > 50) {
+
+                    System.out.printf(
+                            "ID: %d | Producto: %s | Stock: %d%n",
+                            producto.getId(),
+                            producto.getTitle(),
+                            producto.getStock()
+                    );
+                }
             }
 
         } catch (SQLException e) {
